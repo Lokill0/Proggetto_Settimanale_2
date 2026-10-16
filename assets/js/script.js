@@ -127,6 +127,16 @@ console.log(prodotti);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 
+function formattaPrezzo(prezzo) {
+   return "€ " + prezzo.toFixed(2).replace(".", ",");
+}
+
+console.log("Monitor: " + formattaPrezzo(150));
+console.log("Mouse: " + formattaPrezzo(24.9));
+console.log("Tablet: " + formattaPrezzo(199.99));
+
+
+
 /* VERSIONE INTERMEDIA — stelline(rating)
    Funzione che ritorna una stringa di stelline piene/vuote.
    Esempio: rating 3 → "★★★☆☆"
@@ -135,17 +145,60 @@ console.log(prodotti);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function stelline(rating) {
+   return "★".repeat(rating) + "☆".repeat(5 - rating);
+}
+
+console.log("Monitor: rating 3 → " + stelline(3));
+console.log("Tablet: rating 5 → " + stelline(5));
+console.log("Mouse: rating 2 → " + stelline(2));
+
+
+
 /* VERSIONE INTERMEDIA — Filtro per categoria
    Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+function filtraCategoria(categoria) {
+   let risultati = [];
+
+   for (let i = 0; i < prodotti.length; i++) {
+      if (prodotti[i].categoria === categoria) {
+         risultati.push(prodotti[i]);
+      }
+   }
+
+   return risultati;
+}
+
+console.log(filtraCategoria("Elettronica"));
+
+
+
+
 /* VERSIONE INTERMEDIA — Filtro disponibilità e rating
    Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function filtraDisponibiliRating() {
+   let risultati = [];
+
+   for (let i = 0; i < prodotti.length; i++) {
+      if (prodotti[i].disponibile === true && prodotti[i].rating >= 3) {
+         risultati.push(prodotti[i]);
+      }
+   }
+
+   return risultati;
+}
+
+console.log(filtraDisponibiliRating());
+
 
 /* --------------------------------------------------------------
 
@@ -155,6 +208,37 @@ console.log(prodotti);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+function renderProdotti(lista) {
+   const contenitoreTabella = document.getElementById("tabella-prodotti");
+
+   contenitoreTabella.innerHTML = `
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Prezzo</th>
+                <th>Rating</th>
+            </tr>
+        </table>
+    `;
+
+   for (let i = 0; i < lista.length; i++) {
+      let prodotto = lista[i];
+
+      contenitoreTabella.querySelector("table").innerHTML += `
+        <tr>
+            <td>${prodotto.nome}</td>
+            <td>${prodotto.categoria}</td>
+            <td>${formattaPrezzo(prodotto.prezzo)}</td>
+            <td class="rating">${stelline(Math.round(prodotto.rating))}</td>
+        </tr>
+    `;
+   }
+}
+
+renderProdotti(prodotti);
 
 
 /* VERSIONE AVANZATA — Aggiungi al carrello
