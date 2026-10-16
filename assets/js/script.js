@@ -7,7 +7,7 @@ REGOLE
   e per la Versione Avanzata (filtri, ordinamento, carrello dinamico, localStorage).
 - Cerca solo cose non viste a lezione. Tutto il necessario è già stato spiegato in settimana.
 */
-
+function
 
 /* VERSIONE INTERMEDIA — array prodotti
    Crea l'array "prodotti" con almeno 12 oggetti.
