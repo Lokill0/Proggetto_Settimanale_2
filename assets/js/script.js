@@ -7,7 +7,7 @@ REGOLE
   e per la Versione Avanzata (filtri, ordinamento, carrello dinamico, localStorage).
 - Cerca solo cose non viste a lezione. Tutto il necessario è già stato spiegato in settimana.
 */
-function
+
 
 /* VERSIONE INTERMEDIA — array prodotti
    Crea l'array "prodotti" con almeno 12 oggetti.
@@ -15,6 +15,108 @@ function
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const prodotti = [
+   {
+      nome: "Cuffie wireless con cancellazione del rumore",
+      categoria: "Elettronica",
+      prezzo: 89.99,
+      rating: 4.2,
+      immagine: "Cuffie",
+      disponibile: true
+   },
+   {
+      nome: "Tablet 10 pollici 64GB",
+      categoria: "Elettronica",
+      prezzo: 199.00,
+      rating: 4.7,
+      immagine: "Tablet",
+      disponibile: true
+   },
+   {
+      nome: "Il romanzo dell'anno",
+      categoria: "Libri",
+      prezzo: 14.90,
+      rating: 4.0,
+      immagine: "Libro",
+      disponibile: true
+   },
+   {
+      nome: "Zaino da viaggio 30L impermeabile",
+      categoria: "Abbigliamento",
+      prezzo: 49.99,
+      rating: 4.3,
+      immagine: "Zaino",
+      disponibile: true
+   },
+   {
+      nome: "Lampada LED da scrivania orientabile",
+      categoria: "Casa",
+      prezzo: 29.50,
+      rating: 3.9,
+      immagine: "Lampada",
+      disponibile: true
+   },
+   {
+      nome: "Smartwatch fitness con GPS",
+      categoria: "Elettronica",
+      prezzo: 119.00,
+      rating: 4.4,
+      immagine: "Smartwatch",
+      disponibile: true
+   },
+   {
+      nome: "Mouse ergonomico wireless",
+      categoria: "Elettronica",
+      prezzo: 24.90,
+      rating: 4.1,
+      immagine: "Mouse",
+      disponibile: true
+   },
+   {
+      nome: "Caffettiera moka 6 tazze",
+      categoria: "Casa",
+      prezzo: 22.00,
+      rating: 4.6,
+      immagine: "Caffettiera",
+      disponibile: true
+   },
+   {
+      nome: "Maglietta basic in cotone",
+      categoria: "Abbigliamento",
+      prezzo: 12.99,
+      rating: 4.0,
+      immagine: "Maglietta",
+      disponibile: true
+   },
+   {
+      nome: "Cuffie con filo",
+      categoria: "Elettronica",
+      prezzo: 9.99,
+      rating: 3.8,
+      immagine: "Cuffie con filo",
+      disponibile: false
+   },
+   {
+      nome: "Libro di cucina",
+      categoria: "Libri",
+      prezzo: 19.90,
+      rating: 4.5,
+      immagine: "Libro di cucina",
+      disponibile: true
+   },
+   {
+      nome: "Set di tazze da colazione",
+      categoria: "Casa",
+      prezzo: 16.50,
+      rating: 4.2,
+      immagine: "Tazze",
+      disponibile: true
+   }
+];
+
+console.log(prodotti);
+
 
 
 /* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
